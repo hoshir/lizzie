@@ -1,0 +1,24 @@
+apply plugin: 'application'
+
+group = 'featurecat'
+version = '0.6'
+
+mainClassName = 'featurecat.lizzie.Lizzie'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.json:json:20180130'
+    implementation 'com.googlecode.juniversalchardet:juniversalchardet:1.0.3'
+    implementation 'com.jhlabs:filters:2.0.235'
+    testImplementation 'junit:junit:4.11'
+}
